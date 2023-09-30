@@ -4,8 +4,8 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Header = () => {
   return (
-    <div className="sticky top-0">
-      <div className="flex justify-between items-center bg-white py-5 max-w-5xl mx-auto">
+    <div className="sticky top-0 w-full bg-white">
+      <div className="flex justify-between items-center py-5 max-w-5xl mx-auto">
         <div className="flex items-center gap-x-3">
           <div className="bg-secondary p-3 rounded-full">
             <FaWineGlassAlt className="text-primary text-xl" />

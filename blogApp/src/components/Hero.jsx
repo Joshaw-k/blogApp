@@ -7,6 +7,7 @@ import {
 } from "wagmi";
 import myABI from "../../abi.json";
 import { toast } from "react-toastify";
+import Modal from "./Modal";
 
 const Hero = () => {
   const { isConnected, address } = useAccount();
@@ -43,6 +44,7 @@ const Hero = () => {
               isConnected ? "bg-primary" : "bg-red-500"
             } inline-flex px-6 py-4 rounded-lg text-white font-medium`}
             disabled={!isConnected}
+            data-hs-overlay="#hs-full-screen-modal-below-xl"
           >
             {data ? "Create post" : "Register here"}
           </button>
@@ -58,6 +60,7 @@ const Hero = () => {
           </button>
         )}
       </div>
+      <Modal />
     </div>
   );
 };

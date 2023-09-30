@@ -10,6 +10,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SinglePost from "./pages/SinglePost";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [sepolia],
@@ -44,6 +45,7 @@ function App() {
             <ToastContainer />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="post/:postid" element={<SinglePost />} />
             </Routes>
           </BrowserRouter>
         </ConnectionProvider>
